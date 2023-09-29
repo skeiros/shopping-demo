@@ -26,4 +26,9 @@ export class AuthService {
   getCurrentUser(): any {
     return localStorage.getItem('currentUser');
   }
+  authenticated():boolean{
+    let u=localStorage.getItem('currentUser');
+    if(u)return true;
+    return false;
+  }
 }

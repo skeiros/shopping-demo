@@ -21,10 +21,7 @@ export class ListComponent {
   selectedLimit:number=10;
    constructor(private authService: AuthService,private shoppingService: ShoppingService,private router: Router,private modalService: NgbModal,) { }
   ngOnInit() {
-    let user=this.authService.getCurrentUser();
-    if(!user){
-      this.router.navigate(['/login']); 
-    }
+   
     this.getCategories();
     this.getProducts();
    

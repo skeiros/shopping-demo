@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  angular-app:
+    build:
+      context: .        # The build context is the current directory where the Dockerfile is located
+      dockerfile: Dockerfile   # Specify the path to your Dockerfile
+    container_name: shipping-demo
+    ports:
+      - "4200:4200"
+    volumes:
+      - .:/usr/src/app    # Mount your application source code into the container
